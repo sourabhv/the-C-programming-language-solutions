@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-#define IN 1
-#define OUT 0
-
 int main() {
     int i, j, c, len = 0, max, histdata[11] = { 0 };
 
@@ -42,7 +39,7 @@ int main() {
             printf("  %c", histdata[j] >= i ? '*' : ' ');
         printf("\n");
     }
-    printf("   +___________________________________\n"); // Yes it's hardcoded
+    printf("   +-----------------------------------\n"); // Yes it's hardcoded
     printf("      1  2  3  4  5  6  7  8  9  10 +10\n"); // get over it!!
 
     return 0;
