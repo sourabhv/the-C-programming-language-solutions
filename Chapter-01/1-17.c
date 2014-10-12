@@ -6,9 +6,7 @@ void copy(char to[], char from[]);
 
 int main() {
     int len, max, templen;
-    char line[MAXLINE], longest[MAXLINE], temp[MAXLINE];
-
-    max = 0;
+    char line[MAXLINE], temp[MAXLINE];
 
     while((len = _getline(line, MAXLINE)) > 0) {
         // find real length
@@ -19,15 +17,9 @@ int main() {
                     break;
             }
 
-        // find max line
-        if (len > max) {
-            max = len;
-            copy(longest, line);
-        }
-        printf("Length: %d\n", len - 1);
+        if (len > 80)
+            printf("%s", line);
     }
-    if (max > 0)
-        printf("\nLongest line was of length %d\nLine: %s", max, longest);
 
     return 0;
 }
